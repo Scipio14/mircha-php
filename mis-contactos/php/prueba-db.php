@@ -44,11 +44,11 @@ echo "Estoy conectado a MySQL <br>"
       echo $row['id_pais'] . " - " . $row['pais'] . "<br/>";
 
     }
-    //6) Cerrar la conexion a la bd
+   
+  }
+ //6) Cerrar la conexion a la bd
     mysqli_close($conn) or die("Ocurrió un error al cerrar la conexión a la base de datos");
     echo "conexión cerrada";
-  }
-
 
 ?>
   
