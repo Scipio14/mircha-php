@@ -43,11 +43,11 @@ While($registro=mysqli_fetch_array($result)){
   echo $registro["nacimiento"] . " --- ";
   echo $registro["telefono"] . " --- ";
   echo $registro["pais"] . " --- ";
-  echo $registro["imagen"] . " --- ";
+  echo $registro["imagen"];
   echo "<br>";
 }
 //Cerrar la conexión
 mysqli_close($conexion) or die("Ocurrió un error al cerrar la conexión a la base de datos");
-echo "Conexi&oacute;n cerrada";
+echo "<h4>Conexi&oacute;n cerrada</h4>";
 
 ?>
