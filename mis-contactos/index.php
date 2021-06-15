@@ -36,14 +36,13 @@ switch($op)
 	<meta charset="utf-8" />
 	<title><?php echo $titulo; ?></title>
   <link rel="stylesheet" href="css/mis-contactos.css">
-	<script src="js/mis-contactos.js"></script>
 </head>
 <body>
 	<section id="contenido">
 		<nav>
 			<ul>
 				<li><a class="cambio" href="index.php">Home</a></li>
-				<li><a class="cambio" href="?op=alta">Alta de Contacto</a></li>
+				<li><a id="alta" class="cambio" href="?op=alta">Alta de Contacto</a></li>
 				<li><a class="cambio" href="?op=baja">Baja de Contacto</a></li>
 				<li><a class="cambio" href="?op=cambios">Cambios de Contacto</a></li>
 				<li><a class="cambio" href="?op=consultas">Consultas de Contacto</a></li>
@@ -53,5 +52,6 @@ switch($op)
 			<?php include($contenido); ?>
 		</section>
 	</section>
+	<script src="js/mis-contactos.js"></script>
 </body>
 </html>
