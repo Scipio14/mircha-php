@@ -38,7 +38,29 @@ abstract class Model{
     $this->conn->close();
 
   }
-  //ejecutar un query simple del tipo INSERT, DELETE, UPDATE
-  //traer resultados de una consulta en un array 
+  //establecer un query que afecte datos (INSERT, DELETE o UPDATE)
+  protected function set_query(){
+    $this->db_open();
+    $this->conn->query($this->query);
+    $this->db_close();
+
+  }
+
+
+  //obtener datos de un query(SELECT)
+  protected function get_query(){
+    $this->db_open();
+
+    $result = $this->conn->query($this->query);
+
+    while( $this->rows[] = $result->fetch_assoc() );
+    /* Limpia de la memoria de la aplicación los datos que ya no estamos utilizando */
+    $result->close();
+
+    $this->db_close();
+
+    return $this->rows;
+
+  }
 
 }
