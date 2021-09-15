@@ -26,7 +26,7 @@ abstract class Model{
       self::$db_host,
       self::$db_user,
       self::$db_pass,
-      $this->db_name;
+      $this->db_name,
 
     );
     $this->conn->set_charset(self::$db_charset);
@@ -59,7 +59,7 @@ abstract class Model{
 
     $this->db_close();
 
-    return $this->rows;
+    return array_pop($this->rows);
 
   }
 
