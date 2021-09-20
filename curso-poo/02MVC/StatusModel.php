@@ -34,8 +34,8 @@ class StatusModel extends Model{
   public function update(){}
   public function delete(){}
 
-  /*public function __destruct(){
-    unset($this);
+ /* public function __destruct(){
+    //unset($this);
   }*/
 
 
