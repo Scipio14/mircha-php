@@ -11,7 +11,13 @@ class StatusModel extends Model{
   }
 
   public function create($status_data = array()){
-    
+    foreach($status_data as $key => $value){
+      //Variables Variables
+      $$key = $value;
+
+    }
+    $this->query = "INSERT INTO status (status_id, status) VALUES ($status_id,'$status')";
+    $this->set_query();
 
   }
   public function read( $status_id = '' ){
@@ -32,8 +38,19 @@ class StatusModel extends Model{
     
     
   }
-  public function update(){}
-  public function delete(){}
+  public function update($status_data = array()){
+    foreach($status_data as $key => $value){
+      $$key = $value;
+
+    }
+    $this->query = "UPDATE status SET status_id = $status_id, status = '$status' WHERE status_id = $status_id ";
+    $this->set_query();
+  }
+  public function delete($status_id = ''){
+    $this->query = "DELETE FROM  status  WHERE status_id = $status_id ";
+    $this->set_query();
+
+  }
 
  /* public function __destruct(){
     //unset($this);

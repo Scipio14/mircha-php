@@ -32,6 +32,13 @@
       'status_id'=>0,
       'status'=>'Otro Status'
     );
-    $status->create($new_status);
+    //$status->create($new_status);
     echo '<h2>Actualizando Status</h2>';
+
+    $update_status = array(
+      'status_id'=>7,
+      'status'=>'Other Status'
+    );
+    //$status->update($update_status);
     echo '<h2>Eliminando Status</h2>';
+    //$status->delete(7);
