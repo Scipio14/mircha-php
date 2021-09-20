@@ -10,7 +10,8 @@ class StatusModel extends Model{
 
   }
 
-  public function create(){
+  public function create($status_data = array()){
+    
 
   }
   public function read( $status_id = '' ){

@@ -28,5 +28,10 @@
 
     echo '</table>';
     echo '<h2>Insertando Status</h2>';
+    $new_status = array(
+      'status_id'=>0,
+      'status'=>'Otro Status'
+    );
+    $status->create($new_status);
     echo '<h2>Actualizando Status</h2>';
     echo '<h2>Eliminando Status</h2>';
