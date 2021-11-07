@@ -1,9 +1,9 @@
 <?php 
-  require('StatusModel.php');
+  require('StatusController.php');
 
   echo '<h1>CRUD con MVC de la Tabla Status</h1>';
 
-  $status = new StatusModel();
+  $status = new StatusController();
 
  $status_data = $status->read();
  var_dump($status_data);
